@@ -102,8 +102,6 @@
   align-items: flex-end;
   position: relative;
 
-
-
   .card {
     height: 100px;
     width: 200px;
@@ -116,22 +114,87 @@
     border-radius: 10px;
   }
 
-  .role{
+  .role {
     top: 400px;
     right: 200px;
-
   }
 
-  .project{
+  .project {
     bottom: 10px;
     left: -40px;
   }
-
-
-
 }
 
 .hero-banner {
   width: 500px;
   object-fit: contain;
+}
+
+// responsive
+
+@media screen and (max-width: 738px) {
+  .contianer {
+    display: flex;
+    flex-direction: column !important;
+    // overflow: scroll;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    height: auto;
+    height: 100vh;
+  }
+
+  .contianer::after {
+    content: "";
+    width: 100px;
+    right: 5px;
+  }
+
+  .contianer::before {
+    content: "";
+    width: 100px;
+    right: 20px;
+  }
+
+  .hero-left {
+    margin-top: 100px;
+
+    .content-section {
+      width: 300px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .card {
+    height: 60px !important;
+    width: 150px !important;
+  }
+
+  .hero-banner {
+    width: 300px;
+  }
+
+  .project {
+    bottom: 110px !important;
+    left: 10px !important;
+  }
+
+  .role {
+    top: 80px !important;
+    right: 2px !important;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+
+  button {
+    width: 120px  !important;
+    height: 40px !important;
+  }
 }
