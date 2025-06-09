@@ -1,1 +1,26 @@
-<p>skills works!</p>
+<main>
+  <section class="skill-section">
+    <div class="content">
+      <h2 class="title">Skills & Expertise</h2>
+
+      <p class="description">
+        Obviously I'm a Web Designer. Web Developer with over 7 years of
+        experience. Experienced with all stages of the development.
+      </p>
+    </div>
+
+    <div class="card-list">
+      <div class="card skill" *ngFor="let skill of skills">
+        <span class="wrapper">
+          <i [class]="skill.icon"></i>
+        </span>
+        <div class="skill-name">
+          <span>{{ skill.name }}</span>
+          <small *ngIf="skill.level" class="text-muted"
+            >({{ skill.level }})</small
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
