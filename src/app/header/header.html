@@ -1,1 +1,29 @@
-<p>header works!</p>
+<header class="header">
+  <div class="logo">Gowtham Kathirvel</div>
+
+  <nav class="navbar">
+    <div class="nav-list" #navList>
+      <div class="link-list">
+        <div class="close-icon" (click)="closeSidebar()"><i class="fa-solid fa-xmark"></i></div>
+        <a class="link-item active-link">Home</a>
+        <a class="link-item">About Me</a>
+        <a class="link-item">Services</a>
+        <a class="link-item">Experience</a>
+        <a class="link-item">Projects</a>
+        <a class="link-item">Blogs</a>
+        <a class="link-item">Contact </a>
+      </div>
+    </div>
+
+    <div #overlay class="overlay" (click)="closeSidebar()"></div>
+
+    <div class="icon-list">
+      <a class="icon-item"><i class="fa-solid fa-at"></i></a>
+      <a class="icon-item"><i class="fa-brands fa-github"></i></a>
+      <a class="icon-item"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="hamburger" (click)="openSidebar()"
+        ><i class="fa-solid fa-bars"></i
+      ></a>
+    </div>
+  </nav>
+</header>

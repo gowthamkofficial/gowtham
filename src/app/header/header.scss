@@ -1,0 +1,149 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  // text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Moon Dance", cursive;
+}
+
+.active-link {
+  color: var(--primary-color) !important;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  // normal links
+  .link-list {
+    display: flex;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: var(--font-color);
+      padding: 0 10px;
+    }
+
+    .link-item:hover {
+      transition: color 0.3s ease;
+      color: var(--primary-color);
+    }
+  }
+
+  // icon links
+
+  .icon-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+
+    .icon-item {
+      height: 30px;
+      width: 30px;
+      background: var(--primary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .hamburger {
+      font-size: 1.5rem;
+      display: none;
+    }
+  }
+}
+
+.link-list .close-icon {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #8c868696;
+  display: none;
+}
+
+.nav-list.active {
+  left: 0;
+}
+
+.overlay.active {
+  display: block;
+}
+
+@media screen and (max-width: 738px) {
+  .header {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .hamburger {
+    display: block !important;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    background: var(--secondary-color);
+    text-align: left;
+    display: flex;
+    justify-content: flex-start !important;
+    z-index: 99;
+    transition: left 0.3s ease;
+    .link-list {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      /* justify-content: center; */
+      padding: 40px 30px;
+      font-weight: 500;
+
+      a {
+        font-size: 1.2rem;
+        padding: 15px 0;
+        cursor: pointer;
+      }
+
+      .close-icon {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        display: block !important;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icon-item {
+    height: 20px;
+    width: 20px;
+  }
+}
