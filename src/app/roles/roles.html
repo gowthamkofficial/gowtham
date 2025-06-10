@@ -1,1 +1,20 @@
-<p>roles works!</p>
+<main>
+  <section class="skill-section">
+    <div class="content">
+      <h2 class="title">Roles & Responsibilities</h2>
+
+      <p class="description">
+        Obviously I'm a Web Designer. Web Developer with over 7 years of
+        experience. Experienced with all stages of the development.
+      </p>
+    </div>
+
+    <div class="card-list">
+      <div class="card" *ngFor="let role of rolesAndResponsibilities">
+        <div class="icon"><i [ngClass]="role.icon"></i></div>
+        <div class="card-title"><span>{{role.role}}</span></div>
+        <div class="card-description"><p>{{role.description}}</p></div>
+      </div>
+    </div>
+  </section>
+</main>
