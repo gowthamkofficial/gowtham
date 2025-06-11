@@ -1,0 +1,77 @@
+.freelance-section {
+  margin-top: 20px;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(253, 249, 242, 0.078);
+  overflow: hidden;
+}
+
+.image-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  position: absolute;
+  top: -20px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color);
+  color: #fff;
+
+  p {
+    max-width: 35%;
+    padding: 20px 0;
+  }
+
+  button {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #cc8815;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .freelance-section {
+    width: 100%;
+    height: 400px;
+  }
+
+  .overlay {
+    height: 130%;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    max-width: 90% !important;
+    padding: 10px 0;
+  }
+}

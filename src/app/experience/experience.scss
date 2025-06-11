@@ -1,0 +1,138 @@
+.experience-section {
+  // margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-weight: 2.5rem;
+    color: var(--font-color);
+  }
+
+  .description {
+    margin-top: 20px;
+    color: grey;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+  }
+}
+
+.left-section {
+  img {
+    width: 150px;
+  }
+
+  .company-name {
+    color: grey;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .duration {
+    color: grey;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.experience-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 30px 0;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+// .left-section::after {
+//   content: "";
+//   width: 2px;
+//   background: grey;
+//   height: 100%;
+//   position: absolute;
+//   right: -10px;
+//   top: 0;
+// }
+
+.mid-line {
+  width: 2px;
+  background: grey;
+  margin: 0 10px;
+  position: relative;
+}
+
+.mid-line::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: grey;
+  top: -6px;
+  left: -6px;
+}
+
+.mid-line::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: grey;
+  bottom: -6px;
+  left: -6px;
+}
+
+.right-section {
+  max-width: 500px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.company-name .role {
+  white-space: nowrap;
+}
+
+.role-description {
+  color: grey;
+}
+
+@media screen and (max-width: 738px) {
+
+  .content{
+    width: 90%;
+  }
+  .experience-section {
+    padding: 50px 20px;
+  }
+  .description {
+    width: 100% !important;
+  }
+
+  .left-section img {
+    width: 110px;
+  }
+}

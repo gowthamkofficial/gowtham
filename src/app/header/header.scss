@@ -10,7 +10,7 @@
   z-index: 100;
 
   &.scrolled {
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 }
@@ -46,6 +46,10 @@
       padding: 0 10px;
     }
 
+    .link-item{
+      cursor: pointer;
+    }
+
     .link-item:hover {
       transition: color 0.3s ease;
       color: var(--primary-color);
@@ -70,6 +74,7 @@
       border-radius: 50%;
       text-decoration: none;
       color: #fff;
+      cursor: pointer;
     }
 
     .hamburger {
@@ -138,6 +143,7 @@
         font-size: 1.2rem;
         padding: 15px 0;
         cursor: pointer;
+        color: #fff;
       }
 
       .close-icon {

@@ -34,11 +34,11 @@ export class Skills {
     { name: 'JIRA', icon: 'fa-brands fa-jira' },
     { name: 'Postman', icon: 'fa-solid fa-flask' },
     { name: 'Swagger', icon: 'fa-solid fa-scroll' },
-    { name: 'Figma', icon: 'fa-brands fa-figma' },
+    // { name: 'Figma', icon: 'fa-brands fa-figma' },
 
     // --- Testing & DevOps ---
     { name: 'Jasmine / Karma', icon: 'fa-solid fa-vial' },
-    { name: 'CI/CD', icon: 'fa-solid fa-rocket' },
+    // { name: 'CI/CD', icon: 'fa-solid fa-rocket' },
 
     // --- Backend Basics ---
     { name: 'Node.js', icon: 'fa-brands fa-node-js', level: 'Intermediate' },

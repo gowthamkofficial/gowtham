@@ -1,1 +1,32 @@
-<p>blogs works!</p>
+<main>
+  <div class="content">
+    <h2 class="title">Awards & Recognitions</h2>
+
+    <!-- <p class="description">
+      Obviously I'm a Web Designer. Web Developer with over 7 years of
+      experience. Experienced with all stages of the development.
+    </p> -->
+  </div>
+  <section>
+    <div class="card-list">
+      <ng-container *ngFor="let data of awards">
+        <div class="card-item">
+          <h4 class="card-title">
+            <span><i class="fa-solid fa-medal"></i></span>{{data.title}}
+          </h4>
+
+          <p class="duration">
+            <span><i class="fa-solid fa-calendar"></i></span>{{data.duration}}
+          </p>
+
+          <p class="org-name">
+            <span><i class="fa-solid fa-location-dot"></i></span
+            >{{data.organization}}
+          </p>
+
+          <p class="card-description">{{data.description}}</p>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+</main>

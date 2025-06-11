@@ -1,1 +1,45 @@
-<p>projects works!</p>
+<main>
+  <div class="content">
+    <h2 class="title">Projects & POC</h2>
+
+    <!-- <p class="description">
+      Obviously I'm a Web Designer. Web Developer with over 7 years of
+      experience. Experienced with all stages of the development.
+    </p> -->
+  </div>
+
+  <section class="projects-section">
+    <div class="projects card-list">
+      <ng-container *ngFor="let data of angularProjects">
+        <div class="card-item">
+          <h3 class="project-title">{{data.title}}</h3>
+
+          <div class="technologies sections">
+            <span class="section-title">Technologies:</span>
+            <div class="tech-list">
+              <span *ngFor="let tech of data.technologies">{{tech}}</span>
+            </div>
+          </div>
+
+          <div class="features sections" *ngIf="data?.features?.length!=0">
+            <span class="section-title">Features:</span>
+            <div class="feat-list">
+              <span *ngFor="let feat of data.features;let i=index;"
+                >{{feat}}{{i+1!=data.features?.length? ', ':''}}</span
+              >
+            </div>
+          </div>
+
+          <div class="description sections">
+            <span class="section-title">Description</span>
+            <ul class="des-list">
+              <li *ngFor="let des of data.description" class="des-itme">
+                <span style="margin: 0 2px">*</span> {{des}}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </section>
+</main>

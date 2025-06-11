@@ -1,0 +1,42 @@
+footer {
+  height: 80px;
+  background: var(--secondary-color);
+  color: #fff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 0 0 5px 5px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: "Moon Dance", cursive;
+  font-weight: 800;
+}
+
+.weblinks {
+  display: flex;
+  gap: 20px;
+
+  i {
+    height: 30px;
+    width: 30px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .weblinks {
+    gap: 10px !important;
+  }
+}

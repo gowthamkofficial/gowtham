@@ -11,6 +11,14 @@ export class Header {
   @ViewChild('navList') navList!: ElementRef;
   @ViewChild('overlay') overlay!: ElementRef;
 
+  scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      this.closeSidebar();
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   openSidebar() {
     this.navList.nativeElement.classList.add('active');
     this.overlay.nativeElement.classList.add('active');

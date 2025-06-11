@@ -1,26 +1,35 @@
-<header class="header"  [ngClass]="{ 'scrolled': isScrolled }">
+<header class="header" [ngClass]="{ 'scrolled': isScrolled }">
   <div class="logo">Gowtham K</div>
 
   <nav class="navbar">
     <div class="nav-list" #navList>
       <div class="link-list">
-        <div class="close-icon" (click)="closeSidebar()"><i class="fa-solid fa-xmark"></i></div>
-        <a class="link-item active-link">Home</a>
-        <a class="link-item">About Me</a>
-        <a class="link-item">Services</a>
-        <a class="link-item">Experience</a>
-        <a class="link-item">Projects</a>
-        <a class="link-item">Blogs</a>
-        <a class="link-item">Contact </a>
+        <div class="close-icon" (click)="closeSidebar()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <a class="link-item active-link" (click)="scrollTo('banner')">Home</a>
+        <a class="link-item" (click)="scrollTo('skills')">Skills</a>
+        <a class="link-item" (click)="scrollTo('roles')">R&R</a>
+        <a class="link-item" (click)="scrollTo('experience')">Experience</a>
+
+        <a class="link-item" (click)="scrollTo('projects')">Projects</a>
+        <a class="link-item" (click)="scrollTo('blogs')">Awards</a>
+        <a class="link-item" (click)="scrollTo('contactme')">Contact</a>
       </div>
     </div>
 
     <div #overlay class="overlay" (click)="closeSidebar()"></div>
 
     <div class="icon-list">
-      <a class="icon-item"><i class="fa-solid fa-at"></i></a>
-      <a class="icon-item"><i class="fa-brands fa-github"></i></a>
-      <a class="icon-item"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="icon-item" href="mailto:gowthamkoffcl@gmail.com"
+        ><i class="fa-solid fa-at"></i
+      ></a>
+      <a class="icon-item" href="https://github.com/gowthamkofficial"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a class="icon-item" href="https://linkedin.com/in/gowthamkoffcl"
+        ><i class="fa-brands fa-linkedin-in"></i
+      ></a>
       <a class="hamburger" (click)="openSidebar()"
         ><i class="fa-solid fa-bars"></i
       ></a>
