@@ -78,6 +78,7 @@
       font-size: 1rem;
       font-weight: 400;
       cursor: pointer;
+      transition: 0.3s ease;
     }
 
     .btn-1 {
@@ -89,6 +90,15 @@
       margin-left: 20px;
       color: var(--primary-color);
       border: 1px solid var(--primary-color);
+    }
+
+    .btn-1:hover {
+      background: #6d22bc;
+    }
+
+    .btn-2:hover {
+      background: var(--secondary-color);
+
     }
   }
 }
@@ -193,7 +203,7 @@
   }
 
   button {
-    width: 120px  !important;
+    width: 120px !important;
     height: 40px !important;
   }
 }
